@@ -7,6 +7,9 @@ use App\Models\Hamburguesa;
 class HamburguesaController extends Controller
 {
     public function Listar(Request $request){
-        return Hamburguesa::all();
+
+        return view("listaDeHamburguesas", [ 
+            "hamburguesas" => Hamburguesa::all()
+        ]);
     }
 }
